@@ -112,7 +112,7 @@ class Item(Resource):
         if result:
             abort(404, message="Was not able to delete")
 
-        return result, 200
+        return {"status": "success"}, 200
 
     # gets entries from db and constructs a json with the correct format
     def parseItemsResult(self):
